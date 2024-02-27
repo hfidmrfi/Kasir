@@ -1,0 +1,53 @@
+CRITICAL - 2024-02-03 16:58:35 --> ParseError: syntax error, unexpected '$validasiForm' (T_VARIABLE), expecting ';' or '{'
+in APPPATH\Controllers\Login.php on line 17.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(288): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ci4\\app\\Controllers\\Login.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Login')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Login')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Login')
+ 5 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\Login', true)
+ 6 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-03 17:05:28 --> ErrorException: Cannot redeclare App\Controllers\Login::login()
+in APPPATH\Controllers\Login.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-02-03 17:05:32 --> ErrorException: Cannot redeclare App\Controllers\Login::login()
+in APPPATH\Controllers\Login.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-02-03 17:15:16 --> ErrorException: Cannot redeclare App\Controllers\Login::login()
+in APPPATH\Controllers\Login.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-02-03 17:15:18 --> ErrorException: Cannot redeclare App\Controllers\Login::login()
+in APPPATH\Controllers\Login.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-02-03 17:29:15 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "login/dashboard.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login/dashboard.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('login/dashboard', [], true)
+ 3 APPPATH\Controllers\Login.php(13): view('login/dashboard')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Login->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-03 17:30:05 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "login/dashboard.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login/dashboard.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('login/dashboard', [], true)
+ 3 APPPATH\Controllers\Login.php(13): view('login/dashboard')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Login->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-03 17:30:28 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "login/menu.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login/menu.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('login/menu', [], true)
+ 3 APPPATH\Controllers\Login.php(13): view('login/menu')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Login->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')

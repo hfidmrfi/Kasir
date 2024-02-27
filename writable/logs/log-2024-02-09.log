@@ -1,0 +1,341 @@
+ERROR - 2024-02-09 06:59:02 --> mysqli_sql_exception: Table 'ci4.user' doesn't exist in C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\app\Controllers\Pengguna.php(12): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Pengguna->index()
+#8 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengguna))
+#9 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-02-09 06:59:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'ci4.user' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Pengguna.php(12): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Pengguna->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengguna))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-09 06:59:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'ci4.user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Pengguna.php(12): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Pengguna->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengguna))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-09 06:59:02 --> [Caused by] mysqli_sql_exception: Table 'ci4.user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `user`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Pengguna.php(12): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Pengguna->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengguna))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+ERROR - 2024-02-09 07:01:21 --> mysqli_sql_exception: Table 'db_ukk.user' doesn't exist in C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\app\Controllers\Pengguna.php(12): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Pengguna->index()
+#8 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengguna))
+#9 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-02-09 07:01:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_ukk.user' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Pengguna.php(12): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Pengguna->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengguna))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-09 07:01:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_ukk.user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Pengguna.php(12): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Pengguna->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengguna))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-09 07:01:21 --> [Caused by] mysqli_sql_exception: Table 'db_ukk.user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `user`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Pengguna.php(12): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Pengguna->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengguna))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-09 07:07:14 --> ErrorException: Undefined index: Nama_User
+in APPPATH\Views\pengguna\data_pengguna.php on line 56.
+ 1 APPPATH\Views\pengguna\data_pengguna.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: Nama_User', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\pengguna\\data_pengguna.php', 56, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\pengguna\\data_pengguna.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pengguna/data_pengguna', [], true)
+ 5 APPPATH\Controllers\Pengguna.php(14): view('pengguna/data_pengguna', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Pengguna->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengguna))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+INFO - 2024-02-09 08:32:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-09 08:33:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-02-09 09:40:46 --> mysqli_sql_exception: Unknown column 'user.id_User' in 'field list' in C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `user`.`...', 0)
+#1 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `user`.`...')
+#2 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `user`.`...')
+#3 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `user`.`...', Array, false)
+#4 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\app\Models\Mpengguna.php(51): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\app\Controllers\Login.php(28): App\Models\Mpengguna->getPengguna(Object(App\Models\Mpengguna), '23')
+#8 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Login->prosesLogin()
+#9 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#10 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-02-09 09:40:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'user.id_User' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `user`.`id_User`, `user`.`username`, `user`.`Nama_User`, `user`.`Password`, `user`.`level`
+FROM `user`
+WHERE `username` = :username:
+AND `password` = :password:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\Mpengguna.php(51): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Login.php(28): App\Models\Mpengguna->getPengguna(Object(App\Models\Mpengguna), '23')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Login->prosesLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-09 09:40:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'user.id_User' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `user`.`id_User`, `user`.`username`, `user`.`Nama_User`, `user`.`Password`, `user`.`level`
+FROM `user`
+WHERE `username` = \'ufad@gmail.com\'
+AND `password` = \'37693cfc748049e45d87b8c7d8b9aacd\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `user`.`id_User`, `user`.`username`, `user`.`Nama_User`, `user`.`Password`, `user`.`level`
+FROM `user`
+WHERE `username` = \'ufad@gmail.com\'
+AND `password` = \'37693cfc748049e45d87b8c7d8b9aacd\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `user`.`id_User`, `user`.`username`, `user`.`Nama_User`, `user`.`Password`, `user`.`level`
+FROM `user`
+WHERE `username` = :username:
+AND `password` = :password:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\Mpengguna.php(51): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Login.php(28): App\Models\Mpengguna->getPengguna(Object(App\Models\Mpengguna), '23')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Login->prosesLogin()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-09 09:40:46 --> [Caused by] mysqli_sql_exception: Unknown column 'user.id_User' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `user`.`id_User`, `user`.`username`, `user`.`Nama_User`, `user`.`Password`, `user`.`level`
+FROM `user`
+WHERE `username` = \'ufad@gmail.com\'
+AND `password` = \'37693cfc748049e45d87b8c7d8b9aacd\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `user`.`id_User`, `user`.`username`, `user`.`Nama_User`, `user`.`Password`, `user`.`level`
+FROM `user`
+WHERE `username` = \'ufad@gmail.com\'
+AND `password` = \'37693cfc748049e45d87b8c7d8b9aacd\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `user`.`id_User`, `user`.`username`, `user`.`Nama_User`, `user`.`Password`, `user`.`level`
+FROM `user`
+WHERE `username` = \'ufad@gmail.com\'
+AND `password` = \'37693cfc748049e45d87b8c7d8b9aacd\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `user`.`id_User`, `user`.`username`, `user`.`Nama_User`, `user`.`Password`, `user`.`level`
+FROM `user`
+WHERE `username` = :username:
+AND `password` = :password:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Mpengguna.php(51): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Login.php(28): App\Models\Mpengguna->getPengguna(Object(App\Models\Mpengguna), '23')
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Login->prosesLogin()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+ERROR - 2024-02-09 09:44:37 --> mysqli_sql_exception: Unknown column 'user.id_User' in 'field list' in C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `user`.`...', 0)
+#1 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `user`.`...')
+#2 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `user`.`...')
+#3 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `user`.`...', Array, false)
+#4 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\app\Models\Mpengguna.php(51): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\app\Controllers\Login.php(28): App\Models\Mpengguna->getPengguna(Object(App\Models\Mpengguna), '23')
+#8 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Login->prosesLogin()
+#9 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#10 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-02-09 09:44:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'user.id_User' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `user`.`id_User`, `user`.`username`, `user`.`Nama_User`, `user`.`Password`, `user`.`level`
+FROM `user`
+WHERE `username` = :username:
+AND `password` = :password:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\Mpengguna.php(51): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Login.php(28): App\Models\Mpengguna->getPengguna(Object(App\Models\Mpengguna), '23')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Login->prosesLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-09 09:44:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'user.id_User' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `user`.`id_User`, `user`.`username`, `user`.`Nama_User`, `user`.`Password`, `user`.`level`
+FROM `user`
+WHERE `username` = \'ufad@gmail.com\'
+AND `password` = \'37693cfc748049e45d87b8c7d8b9aacd\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `user`.`id_User`, `user`.`username`, `user`.`Nama_User`, `user`.`Password`, `user`.`level`
+FROM `user`
+WHERE `username` = \'ufad@gmail.com\'
+AND `password` = \'37693cfc748049e45d87b8c7d8b9aacd\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `user`.`id_User`, `user`.`username`, `user`.`Nama_User`, `user`.`Password`, `user`.`level`
+FROM `user`
+WHERE `username` = :username:
+AND `password` = :password:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\Mpengguna.php(51): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Login.php(28): App\Models\Mpengguna->getPengguna(Object(App\Models\Mpengguna), '23')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Login->prosesLogin()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-09 09:44:37 --> [Caused by] mysqli_sql_exception: Unknown column 'user.id_User' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `user`.`id_User`, `user`.`username`, `user`.`Nama_User`, `user`.`Password`, `user`.`level`
+FROM `user`
+WHERE `username` = \'ufad@gmail.com\'
+AND `password` = \'37693cfc748049e45d87b8c7d8b9aacd\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `user`.`id_User`, `user`.`username`, `user`.`Nama_User`, `user`.`Password`, `user`.`level`
+FROM `user`
+WHERE `username` = \'ufad@gmail.com\'
+AND `password` = \'37693cfc748049e45d87b8c7d8b9aacd\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `user`.`id_User`, `user`.`username`, `user`.`Nama_User`, `user`.`Password`, `user`.`level`
+FROM `user`
+WHERE `username` = \'ufad@gmail.com\'
+AND `password` = \'37693cfc748049e45d87b8c7d8b9aacd\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `user`.`id_User`, `user`.`username`, `user`.`Nama_User`, `user`.`Password`, `user`.`level`
+FROM `user`
+WHERE `username` = :username:
+AND `password` = :password:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Mpengguna.php(51): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Login.php(28): App\Models\Mpengguna->getPengguna(Object(App\Models\Mpengguna), '23')
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Login->prosesLogin()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+INFO - 2024-02-09 09:45:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-09 09:45:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-09 09:46:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-09 09:53:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-09 09:53:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-09 09:56:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-09 09:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-09 10:06:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-09 10:10:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-09 10:10:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-09 10:13:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-09 10:18:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-09 14:28:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-09 14:46:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-09 14:46:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-09 14:46:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-09 14:47:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-09 14:47:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-09 23:34:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-09 23:47:48 --> ErrorException: Undefined variable: dataSession
+in APPPATH\Controllers\Login.php on line 59.
+ 1 APPPATH\Controllers\Login.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: dataSession', 'C:\\xampp\\htdocs\\ci4\\app\\Controllers\\Login.php', 59, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Login->logout()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-09 23:57:16 --> ErrorException: Undefined property: App\Controllers\Login::$session
+in APPPATH\Controllers\Login.php on line 60.
+ 1 APPPATH\Controllers\Login.php(60): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Login::$session', 'C:\\xampp\\htdocs\\ci4\\app\\Controllers\\Login.php', 60, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Login->logout()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-09 23:57:34 --> ErrorException: Undefined variable: session
+in APPPATH\Controllers\Login.php on line 60.
+ 1 APPPATH\Controllers\Login.php(60): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: session', 'C:\\xampp\\htdocs\\ci4\\app\\Controllers\\Login.php', 60, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Login->logout()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')

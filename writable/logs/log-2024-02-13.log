@@ -1,0 +1,679 @@
+INFO - 2024-02-13 00:44:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 01:00:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-13 01:04:28 --> ErrorException: Undefined index: idProduk
+in APPPATH\Views\produk\edit-produk.php on line 19.
+ 1 APPPATH\Views\produk\edit-produk.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: idProduk', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\produk\\edit-produk.php', 19, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\produk\\edit-produk.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('produk/edit-produk', [], true)
+ 5 APPPATH\Controllers\Produk.php(53): view('produk/edit-produk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->editProduk('13')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-13 01:04:55 --> ErrorException: Undefined index: kodeProduk
+in APPPATH\Views\produk\edit-produk.php on line 23.
+ 1 APPPATH\Views\produk\edit-produk.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kodeProduk', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\produk\\edit-produk.php', 23, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\produk\\edit-produk.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('produk/edit-produk', [], true)
+ 5 APPPATH\Controllers\Produk.php(53): view('produk/edit-produk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->editProduk('13')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+ERROR - 2024-02-13 01:07:29 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_ukk`.`produk`, CONSTRAINT `produk_ibfk_2` FOREIGN KEY (`katid`) REFERENCES `kategori` (`katid`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `produk`...', 0)
+#1 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `produk`...')
+#2 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `produk`...')
+#3 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2469): CodeIgniter\Database\BaseConnection->query('UPDATE `produk`...', Array, false)
+#4 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Model.php(393): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\BaseModel.php(987): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Model.php(807): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\ci4\app\Controllers\Produk.php(69): CodeIgniter\Model->update('13', Array)
+#8 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Produk->updateProduk()
+#9 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#10 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-02-13 01:07:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_ukk`.`produk`, CONSTRAINT `produk_ibfk_2` FOREIGN KEY (`katid`) REFERENCES `kategori` (`katid`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2469): CodeIgniter\Database\BaseConnection->query('UPDATE `produk` SET `kode_produk` = :kode_produk:, `nama_produk` = :nama_produk:, `harga_beli` = :harga_beli:, `harga_jual` = :harga_jual:, `diskon` = :diskon:, `katid` = :katid:, `satid` = :satid:, `stok` = :stok:
+WHERE `produk`.`idProduk` IN :produk.idProduk:', [...], false)
+ 2 SYSTEMPATH\Model.php(393): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(987): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(807): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Produk.php(69): CodeIgniter\Model->update('13', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->updateProduk()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-13 01:07:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_ukk`.`produk`, CONSTRAINT `produk_ibfk_2` FOREIGN KEY (`katid`) REFERENCES `kategori` (`katid`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `produk` SET `kode_produk` = NULL, `nama_produk` = NULL, `harga_beli` = NULL, `harga_jual` = NULL, `diskon` = NULL, `katid` = NULL, `satid` = NULL, `stok` = NULL
+WHERE `produk`.`idProduk` IN (\'13\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `produk` SET `kode_produk` = NULL, `nama_produk` = NULL, `harga_beli` = NULL, `harga_jual` = NULL, `diskon` = NULL, `katid` = NULL, `satid` = NULL, `stok` = NULL
+WHERE `produk`.`idProduk` IN (\'13\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2469): CodeIgniter\Database\BaseConnection->query('UPDATE `produk` SET `kode_produk` = :kode_produk:, `nama_produk` = :nama_produk:, `harga_beli` = :harga_beli:, `harga_jual` = :harga_jual:, `diskon` = :diskon:, `katid` = :katid:, `satid` = :satid:, `stok` = :stok:
+WHERE `produk`.`idProduk` IN :produk.idProduk:', [...], false)
+ 4 SYSTEMPATH\Model.php(393): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(987): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(807): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Produk.php(69): CodeIgniter\Model->update('13', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->updateProduk()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-13 01:07:29 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_ukk`.`produk`, CONSTRAINT `produk_ibfk_2` FOREIGN KEY (`katid`) REFERENCES `kategori` (`katid`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `produk` SET `kode_produk` = NULL, `nama_produk` = NULL, `harga_beli` = NULL, `harga_jual` = NULL, `diskon` = NULL, `katid` = NULL, `satid` = NULL, `stok` = NULL
+WHERE `produk`.`idProduk` IN (\'13\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `produk` SET `kode_produk` = NULL, `nama_produk` = NULL, `harga_beli` = NULL, `harga_jual` = NULL, `diskon` = NULL, `katid` = NULL, `satid` = NULL, `stok` = NULL
+WHERE `produk`.`idProduk` IN (\'13\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `produk` SET `kode_produk` = NULL, `nama_produk` = NULL, `harga_beli` = NULL, `harga_jual` = NULL, `diskon` = NULL, `katid` = NULL, `satid` = NULL, `stok` = NULL
+WHERE `produk`.`idProduk` IN (\'13\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2469): CodeIgniter\Database\BaseConnection->query('UPDATE `produk` SET `kode_produk` = :kode_produk:, `nama_produk` = :nama_produk:, `harga_beli` = :harga_beli:, `harga_jual` = :harga_jual:, `diskon` = :diskon:, `katid` = :katid:, `satid` = :satid:, `stok` = :stok:
+WHERE `produk`.`idProduk` IN :produk.idProduk:', [...], false)
+ 5 SYSTEMPATH\Model.php(393): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(987): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(807): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Produk.php(69): CodeIgniter\Model->update('13', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->updateProduk()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+ERROR - 2024-02-13 01:08:20 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_ukk`.`produk`, CONSTRAINT `produk_ibfk_2` FOREIGN KEY (`katid`) REFERENCES `kategori` (`katid`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `produk`...', 0)
+#1 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `produk`...')
+#2 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `produk`...')
+#3 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2469): CodeIgniter\Database\BaseConnection->query('UPDATE `produk`...', Array, false)
+#4 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Model.php(393): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\BaseModel.php(987): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Model.php(807): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\ci4\app\Controllers\Produk.php(69): CodeIgniter\Model->update('13', Array)
+#8 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Produk->updateProduk()
+#9 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#10 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-02-13 01:08:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_ukk`.`produk`, CONSTRAINT `produk_ibfk_2` FOREIGN KEY (`katid`) REFERENCES `kategori` (`katid`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2469): CodeIgniter\Database\BaseConnection->query('UPDATE `produk` SET `kode_produk` = :kode_produk:, `nama_produk` = :nama_produk:, `harga_beli` = :harga_beli:, `harga_jual` = :harga_jual:, `diskon` = :diskon:, `katid` = :katid:, `satid` = :satid:, `stok` = :stok:
+WHERE `produk`.`idProduk` IN :produk.idProduk:', [...], false)
+ 2 SYSTEMPATH\Model.php(393): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(987): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(807): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Produk.php(69): CodeIgniter\Model->update('13', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->updateProduk()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-13 01:08:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_ukk`.`produk`, CONSTRAINT `produk_ibfk_2` FOREIGN KEY (`katid`) REFERENCES `kategori` (`katid`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `produk` SET `kode_produk` = NULL, `nama_produk` = NULL, `harga_beli` = NULL, `harga_jual` = NULL, `diskon` = NULL, `katid` = NULL, `satid` = NULL, `stok` = NULL
+WHERE `produk`.`idProduk` IN (\'13\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `produk` SET `kode_produk` = NULL, `nama_produk` = NULL, `harga_beli` = NULL, `harga_jual` = NULL, `diskon` = NULL, `katid` = NULL, `satid` = NULL, `stok` = NULL
+WHERE `produk`.`idProduk` IN (\'13\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2469): CodeIgniter\Database\BaseConnection->query('UPDATE `produk` SET `kode_produk` = :kode_produk:, `nama_produk` = :nama_produk:, `harga_beli` = :harga_beli:, `harga_jual` = :harga_jual:, `diskon` = :diskon:, `katid` = :katid:, `satid` = :satid:, `stok` = :stok:
+WHERE `produk`.`idProduk` IN :produk.idProduk:', [...], false)
+ 4 SYSTEMPATH\Model.php(393): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(987): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(807): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Produk.php(69): CodeIgniter\Model->update('13', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->updateProduk()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-13 01:08:20 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_ukk`.`produk`, CONSTRAINT `produk_ibfk_2` FOREIGN KEY (`katid`) REFERENCES `kategori` (`katid`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `produk` SET `kode_produk` = NULL, `nama_produk` = NULL, `harga_beli` = NULL, `harga_jual` = NULL, `diskon` = NULL, `katid` = NULL, `satid` = NULL, `stok` = NULL
+WHERE `produk`.`idProduk` IN (\'13\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `produk` SET `kode_produk` = NULL, `nama_produk` = NULL, `harga_beli` = NULL, `harga_jual` = NULL, `diskon` = NULL, `katid` = NULL, `satid` = NULL, `stok` = NULL
+WHERE `produk`.`idProduk` IN (\'13\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `produk` SET `kode_produk` = NULL, `nama_produk` = NULL, `harga_beli` = NULL, `harga_jual` = NULL, `diskon` = NULL, `katid` = NULL, `satid` = NULL, `stok` = NULL
+WHERE `produk`.`idProduk` IN (\'13\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2469): CodeIgniter\Database\BaseConnection->query('UPDATE `produk` SET `kode_produk` = :kode_produk:, `nama_produk` = :nama_produk:, `harga_beli` = :harga_beli:, `harga_jual` = :harga_jual:, `diskon` = :diskon:, `katid` = :katid:, `satid` = :satid:, `stok` = :stok:
+WHERE `produk`.`idProduk` IN :produk.idProduk:', [...], false)
+ 5 SYSTEMPATH\Model.php(393): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(987): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(807): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Produk.php(69): CodeIgniter\Model->update('13', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->updateProduk()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-13 01:11:20 --> ErrorException: Undefined index: id_produk
+in APPPATH\Views\produk\edit-produk.php on line 14.
+ 1 APPPATH\Views\produk\edit-produk.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id_produk', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\produk\\edit-produk.php', 14, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\produk\\edit-produk.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('produk/edit-produk', [], true)
+ 5 APPPATH\Controllers\Produk.php(53): view('produk/edit-produk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->editProduk('13')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+ERROR - 2024-02-13 01:11:50 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_ukk`.`produk`, CONSTRAINT `produk_ibfk_2` FOREIGN KEY (`katid`) REFERENCES `kategori` (`katid`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `produk`...', 0)
+#1 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `produk`...')
+#2 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `produk`...')
+#3 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2469): CodeIgniter\Database\BaseConnection->query('UPDATE `produk`...', Array, false)
+#4 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Model.php(393): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\BaseModel.php(987): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Model.php(807): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\ci4\app\Controllers\Produk.php(69): CodeIgniter\Model->update('13', Array)
+#8 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Produk->updateProduk('13')
+#9 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#10 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-02-13 01:11:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_ukk`.`produk`, CONSTRAINT `produk_ibfk_2` FOREIGN KEY (`katid`) REFERENCES `kategori` (`katid`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2469): CodeIgniter\Database\BaseConnection->query('UPDATE `produk` SET `kode_produk` = :kode_produk:, `nama_produk` = :nama_produk:, `harga_beli` = :harga_beli:, `harga_jual` = :harga_jual:, `diskon` = :diskon:, `katid` = :katid:, `satid` = :satid:, `stok` = :stok:
+WHERE `produk`.`idProduk` IN :produk.idProduk:', [...], false)
+ 2 SYSTEMPATH\Model.php(393): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(987): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(807): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Produk.php(69): CodeIgniter\Model->update('13', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->updateProduk('13')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-13 01:11:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_ukk`.`produk`, CONSTRAINT `produk_ibfk_2` FOREIGN KEY (`katid`) REFERENCES `kategori` (`katid`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `produk` SET `kode_produk` = NULL, `nama_produk` = NULL, `harga_beli` = NULL, `harga_jual` = NULL, `diskon` = NULL, `katid` = NULL, `satid` = NULL, `stok` = NULL
+WHERE `produk`.`idProduk` IN (\'13\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `produk` SET `kode_produk` = NULL, `nama_produk` = NULL, `harga_beli` = NULL, `harga_jual` = NULL, `diskon` = NULL, `katid` = NULL, `satid` = NULL, `stok` = NULL
+WHERE `produk`.`idProduk` IN (\'13\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2469): CodeIgniter\Database\BaseConnection->query('UPDATE `produk` SET `kode_produk` = :kode_produk:, `nama_produk` = :nama_produk:, `harga_beli` = :harga_beli:, `harga_jual` = :harga_jual:, `diskon` = :diskon:, `katid` = :katid:, `satid` = :satid:, `stok` = :stok:
+WHERE `produk`.`idProduk` IN :produk.idProduk:', [...], false)
+ 4 SYSTEMPATH\Model.php(393): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(987): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(807): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Produk.php(69): CodeIgniter\Model->update('13', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->updateProduk('13')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-13 01:11:50 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_ukk`.`produk`, CONSTRAINT `produk_ibfk_2` FOREIGN KEY (`katid`) REFERENCES `kategori` (`katid`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `produk` SET `kode_produk` = NULL, `nama_produk` = NULL, `harga_beli` = NULL, `harga_jual` = NULL, `diskon` = NULL, `katid` = NULL, `satid` = NULL, `stok` = NULL
+WHERE `produk`.`idProduk` IN (\'13\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `produk` SET `kode_produk` = NULL, `nama_produk` = NULL, `harga_beli` = NULL, `harga_jual` = NULL, `diskon` = NULL, `katid` = NULL, `satid` = NULL, `stok` = NULL
+WHERE `produk`.`idProduk` IN (\'13\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `produk` SET `kode_produk` = NULL, `nama_produk` = NULL, `harga_beli` = NULL, `harga_jual` = NULL, `diskon` = NULL, `katid` = NULL, `satid` = NULL, `stok` = NULL
+WHERE `produk`.`idProduk` IN (\'13\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2469): CodeIgniter\Database\BaseConnection->query('UPDATE `produk` SET `kode_produk` = :kode_produk:, `nama_produk` = :nama_produk:, `harga_beli` = :harga_beli:, `harga_jual` = :harga_jual:, `diskon` = :diskon:, `katid` = :katid:, `satid` = :satid:, `stok` = :stok:
+WHERE `produk`.`idProduk` IN :produk.idProduk:', [...], false)
+ 5 SYSTEMPATH\Model.php(393): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(987): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(807): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Produk.php(69): CodeIgniter\Model->update('13', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->updateProduk('13')
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-13 01:12:53 --> ErrorException: Undefined variable: listSatuan
+in APPPATH\Views\produk\edit-produk.php on line 56.
+ 1 APPPATH\Views\produk\edit-produk.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: listSatuan', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\produk\\edit-produk.php', 56, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\produk\\edit-produk.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('produk/edit-produk', [], true)
+ 5 APPPATH\Controllers\Produk.php(53): view('produk/edit-produk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->editProduk('13')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-13 01:18:10 --> ErrorException: Undefined index: katid
+in APPPATH\Views\produk\edit-produk.php on line 64.
+ 1 APPPATH\Views\produk\edit-produk.php(64): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: katid', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\produk\\edit-produk.php', 64, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\produk\\edit-produk.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('produk/edit-produk', [], true)
+ 5 APPPATH\Controllers\Produk.php(55): view('produk/edit-produk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->editProduk('13')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-13 01:18:25 --> ErrorException: Undefined index: satid
+in APPPATH\Views\produk\edit-produk.php on line 52.
+ 1 APPPATH\Views\produk\edit-produk.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: satid', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\produk\\edit-produk.php', 52, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\produk\\edit-produk.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('produk/edit-produk', [], true)
+ 5 APPPATH\Controllers\Produk.php(55): view('produk/edit-produk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->editProduk('13')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+ERROR - 2024-02-13 01:19:10 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_ukk`.`produk`, CONSTRAINT `produk_ibfk_2` FOREIGN KEY (`katid`) REFERENCES `kategori` (`katid`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `produk`...', 0)
+#1 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `produk`...')
+#2 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `produk`...')
+#3 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2469): CodeIgniter\Database\BaseConnection->query('UPDATE `produk`...', Array, false)
+#4 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Model.php(393): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\BaseModel.php(987): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Model.php(807): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\ci4\app\Controllers\Produk.php(71): CodeIgniter\Model->update('13', Array)
+#8 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Produk->updateProduk('13')
+#9 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#10 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-02-13 01:19:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_ukk`.`produk`, CONSTRAINT `produk_ibfk_2` FOREIGN KEY (`katid`) REFERENCES `kategori` (`katid`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2469): CodeIgniter\Database\BaseConnection->query('UPDATE `produk` SET `kode_produk` = :kode_produk:, `nama_produk` = :nama_produk:, `harga_beli` = :harga_beli:, `harga_jual` = :harga_jual:, `diskon` = :diskon:, `katid` = :katid:, `satid` = :satid:, `stok` = :stok:
+WHERE `produk`.`idProduk` IN :produk.idProduk:', [...], false)
+ 2 SYSTEMPATH\Model.php(393): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(987): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(807): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Produk.php(71): CodeIgniter\Model->update('13', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->updateProduk('13')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-13 01:19:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_ukk`.`produk`, CONSTRAINT `produk_ibfk_2` FOREIGN KEY (`katid`) REFERENCES `kategori` (`katid`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `produk` SET `kode_produk` = NULL, `nama_produk` = NULL, `harga_beli` = NULL, `harga_jual` = NULL, `diskon` = NULL, `katid` = NULL, `satid` = \'11\', `stok` = NULL
+WHERE `produk`.`idProduk` IN (\'13\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `produk` SET `kode_produk` = NULL, `nama_produk` = NULL, `harga_beli` = NULL, `harga_jual` = NULL, `diskon` = NULL, `katid` = NULL, `satid` = \'11\', `stok` = NULL
+WHERE `produk`.`idProduk` IN (\'13\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2469): CodeIgniter\Database\BaseConnection->query('UPDATE `produk` SET `kode_produk` = :kode_produk:, `nama_produk` = :nama_produk:, `harga_beli` = :harga_beli:, `harga_jual` = :harga_jual:, `diskon` = :diskon:, `katid` = :katid:, `satid` = :satid:, `stok` = :stok:
+WHERE `produk`.`idProduk` IN :produk.idProduk:', [...], false)
+ 4 SYSTEMPATH\Model.php(393): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(987): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(807): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Produk.php(71): CodeIgniter\Model->update('13', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->updateProduk('13')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-13 01:19:10 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_ukk`.`produk`, CONSTRAINT `produk_ibfk_2` FOREIGN KEY (`katid`) REFERENCES `kategori` (`katid`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `produk` SET `kode_produk` = NULL, `nama_produk` = NULL, `harga_beli` = NULL, `harga_jual` = NULL, `diskon` = NULL, `katid` = NULL, `satid` = \'11\', `stok` = NULL
+WHERE `produk`.`idProduk` IN (\'13\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `produk` SET `kode_produk` = NULL, `nama_produk` = NULL, `harga_beli` = NULL, `harga_jual` = NULL, `diskon` = NULL, `katid` = NULL, `satid` = \'11\', `stok` = NULL
+WHERE `produk`.`idProduk` IN (\'13\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `produk` SET `kode_produk` = NULL, `nama_produk` = NULL, `harga_beli` = NULL, `harga_jual` = NULL, `diskon` = NULL, `katid` = NULL, `satid` = \'11\', `stok` = NULL
+WHERE `produk`.`idProduk` IN (\'13\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2469): CodeIgniter\Database\BaseConnection->query('UPDATE `produk` SET `kode_produk` = :kode_produk:, `nama_produk` = :nama_produk:, `harga_beli` = :harga_beli:, `harga_jual` = :harga_jual:, `diskon` = :diskon:, `katid` = :katid:, `satid` = :satid:, `stok` = :stok:
+WHERE `produk`.`idProduk` IN :produk.idProduk:', [...], false)
+ 5 SYSTEMPATH\Model.php(393): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(987): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(807): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Produk.php(71): CodeIgniter\Model->update('13', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->updateProduk('13')
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+INFO - 2024-02-13 01:20:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 01:20:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 01:21:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 01:27:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 01:32:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 01:35:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 02:13:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 02:13:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 02:33:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 04:59:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 04:59:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 05:02:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 05:02:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 05:03:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 05:05:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 05:05:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 05:06:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-02-13 06:23:17 --> mysqli_sql_exception: Table 'db_ukk.user' doesn't exist in engine in C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `user`.`...', 0)
+#1 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `user`.`...')
+#2 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `user`.`...')
+#3 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `user`.`...', Array, false)
+#4 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\app\Models\Mpengguna.php(51): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\app\Controllers\Login.php(28): App\Models\Mpengguna->getPengguna(Object(App\Models\Mpengguna), '111')
+#8 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Login->prosesLogin()
+#9 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#10 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-02-13 06:23:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_ukk.user' doesn't exist in engine
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `user`.`idUser`, `user`.`username`, `user`.`Nama_User`, `user`.`Password`, `user`.`Level`
+FROM `user`
+WHERE `username` = :username:
+AND `password` = :password:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\Mpengguna.php(51): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Login.php(28): App\Models\Mpengguna->getPengguna(Object(App\Models\Mpengguna), '111')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Login->prosesLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-13 06:23:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_ukk.user' doesn't exist in engine
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `user`.`idUser`, `user`.`username`, `user`.`Nama_User`, `user`.`Password`, `user`.`Level`
+FROM `user`
+WHERE `username` = \'fadzz\'
+AND `password` = \'698d51a19d8a121ce581499d7b701668\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `user`.`idUser`, `user`.`username`, `user`.`Nama_User`, `user`.`Password`, `user`.`Level`
+FROM `user`
+WHERE `username` = \'fadzz\'
+AND `password` = \'698d51a19d8a121ce581499d7b701668\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `user`.`idUser`, `user`.`username`, `user`.`Nama_User`, `user`.`Password`, `user`.`Level`
+FROM `user`
+WHERE `username` = :username:
+AND `password` = :password:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\Mpengguna.php(51): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Login.php(28): App\Models\Mpengguna->getPengguna(Object(App\Models\Mpengguna), '111')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Login->prosesLogin()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-13 06:23:17 --> [Caused by] mysqli_sql_exception: Table 'db_ukk.user' doesn't exist in engine
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `user`.`idUser`, `user`.`username`, `user`.`Nama_User`, `user`.`Password`, `user`.`Level`
+FROM `user`
+WHERE `username` = \'fadzz\'
+AND `password` = \'698d51a19d8a121ce581499d7b701668\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `user`.`idUser`, `user`.`username`, `user`.`Nama_User`, `user`.`Password`, `user`.`Level`
+FROM `user`
+WHERE `username` = \'fadzz\'
+AND `password` = \'698d51a19d8a121ce581499d7b701668\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `user`.`idUser`, `user`.`username`, `user`.`Nama_User`, `user`.`Password`, `user`.`Level`
+FROM `user`
+WHERE `username` = \'fadzz\'
+AND `password` = \'698d51a19d8a121ce581499d7b701668\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `user`.`idUser`, `user`.`username`, `user`.`Nama_User`, `user`.`Password`, `user`.`Level`
+FROM `user`
+WHERE `username` = :username:
+AND `password` = :password:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Mpengguna.php(51): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Login.php(28): App\Models\Mpengguna->getPengguna(Object(App\Models\Mpengguna), '111')
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Login->prosesLogin()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+INFO - 2024-02-13 06:24:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:25:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:25:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:25:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:25:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:25:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:25:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:25:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:25:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:25:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:26:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:26:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:26:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:26:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:27:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:28:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:28:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:28:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:28:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:28:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:28:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:28:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:28:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:29:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:29:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:29:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:29:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:30:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:30:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:30:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:30:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:30:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:30:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:30:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:34:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:40:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:40:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:40:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:41:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:41:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:42:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:42:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:42:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:42:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:42:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:43:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:43:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:43:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:43:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:43:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:43:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:43:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:43:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:43:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:43:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 06:44:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 07:15:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 07:15:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-13 07:15:58 --> ErrorException: Undefined variable: NoFaktur
+in APPPATH\Views\penjualan\data_penjualan.php on line 21.
+ 1 APPPATH\Views\penjualan\data_penjualan.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: NoFaktur', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\penjualan\\data_penjualan.php', 21, [])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\penjualan\\data_penjualan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('penjualan/data_penjualan', [], true)
+ 5 APPPATH\Controllers\Penjualan.php(13): view('penjualan/data_penjualan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penjualan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-13 07:16:38 --> ErrorException: Undefined variable: NoFaktur
+in APPPATH\Views\penjualan\data_penjualan.php on line 21.
+ 1 APPPATH\Views\penjualan\data_penjualan.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: NoFaktur', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\penjualan\\data_penjualan.php', 21, [])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\penjualan\\data_penjualan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('penjualan/data_penjualan', [], true)
+ 5 APPPATH\Controllers\Penjualan.php(13): view('penjualan/data_penjualan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penjualan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-13 07:17:02 --> ErrorException: Undefined variable: NoFaktur
+in APPPATH\Views\penjualan\data_penjualan.php on line 21.
+ 1 APPPATH\Views\penjualan\data_penjualan.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: NoFaktur', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\penjualan\\data_penjualan.php', 21, [])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\penjualan\\data_penjualan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('penjualan/data_penjualan', [], true)
+ 5 APPPATH\Controllers\Penjualan.php(13): view('penjualan/data_penjualan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penjualan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-13 07:17:15 --> ErrorException: Undefined variable: no_faktur
+in APPPATH\Views\penjualan\data_penjualan.php on line 21.
+ 1 APPPATH\Views\penjualan\data_penjualan.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: no_faktur', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\penjualan\\data_penjualan.php', 21, [])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\penjualan\\data_penjualan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('penjualan/data_penjualan', [], true)
+ 5 APPPATH\Controllers\Penjualan.php(13): view('penjualan/data_penjualan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penjualan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-13 07:18:12 --> ErrorException: Undefined variable: no_faktur
+in APPPATH\Views\penjualan\data_penjualan.php on line 21.
+ 1 APPPATH\Views\penjualan\data_penjualan.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: no_faktur', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\penjualan\\data_penjualan.php', 21, [])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\penjualan\\data_penjualan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('penjualan/data_penjualan', [], true)
+ 5 APPPATH\Controllers\Penjualan.php(13): view('penjualan/data_penjualan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penjualan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-13 07:19:39 --> ErrorException: Undefined variable: no_faktur
+in APPPATH\Views\penjualan\data_penjualan.php on line 21.
+ 1 APPPATH\Views\penjualan\data_penjualan.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: no_faktur', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\penjualan\\data_penjualan.php', 21, [])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\penjualan\\data_penjualan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('penjualan/data_penjualan', [], true)
+ 5 APPPATH\Controllers\Penjualan.php(13): view('penjualan/data_penjualan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penjualan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+INFO - 2024-02-13 07:22:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 07:22:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-13 07:22:26 --> ErrorException: Undefined variable: no_faktur
+in APPPATH\Views\penjualan\data_penjualan.php on line 21.
+ 1 APPPATH\Views\penjualan\data_penjualan.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: no_faktur', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\penjualan\\data_penjualan.php', 21, [])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\penjualan\\data_penjualan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('penjualan/data_penjualan', [], true)
+ 5 APPPATH\Controllers\Penjualan.php(13): view('penjualan/data_penjualan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penjualan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-13 07:23:58 --> ErrorException: Undefined variable: no_faktur
+in APPPATH\Views\penjualan\data_penjualan.php on line 21.
+ 1 APPPATH\Views\penjualan\data_penjualan.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: no_faktur', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\penjualan\\data_penjualan.php', 21, [])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\penjualan\\data_penjualan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('penjualan/data_penjualan', [], true)
+ 5 APPPATH\Controllers\Penjualan.php(13): view('penjualan/data_penjualan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penjualan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+INFO - 2024-02-13 12:54:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:54:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:55:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-13 12:55:13 --> ErrorException: Undefined variable: no_faktur
+in APPPATH\Views\penjualan\data_penjualan.php on line 21.
+ 1 APPPATH\Views\penjualan\data_penjualan.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: no_faktur', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\penjualan\\data_penjualan.php', 21, [])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\penjualan\\data_penjualan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('penjualan/data_penjualan', [], true)
+ 5 APPPATH\Controllers\Penjualan.php(13): view('penjualan/data_penjualan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penjualan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-13 12:56:39 --> ErrorException: Undefined variable: no_faktur
+in APPPATH\Views\penjualan\data_penjualan.php on line 21.
+ 1 APPPATH\Views\penjualan\data_penjualan.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: no_faktur', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\penjualan\\data_penjualan.php', 21, [])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\penjualan\\data_penjualan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('penjualan/data_penjualan', [], true)
+ 5 APPPATH\Controllers\Penjualan.php(13): view('penjualan/data_penjualan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penjualan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+INFO - 2024-02-13 12:57:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-13 13:00:43 --> ErrorException: Undefined variable: no_faktur
+in APPPATH\Views\penjualan\data_penjualan.php on line 21.
+ 1 APPPATH\Views\penjualan\data_penjualan.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: no_faktur', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\penjualan\\data_penjualan.php', 21, [])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\penjualan\\data_penjualan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('penjualan/data_penjualan', [], true)
+ 5 APPPATH\Controllers\Penjualan.php(13): view('penjualan/data_penjualan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penjualan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+INFO - 2024-02-13 13:01:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:05:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:06:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:12:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:13:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:14:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:15:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:16:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:16:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:27:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:28:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:28:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:28:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:28:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:28:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:28:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:28:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:28:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:28:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:28:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:29:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:31:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:31:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:31:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:31:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:31:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:32:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:33:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:33:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:34:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:34:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:35:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:35:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:35:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:36:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:36:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:36:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:36:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:36:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:36:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:37:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:37:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:37:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:40:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:40:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:46:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:46:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:46:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 13:46:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

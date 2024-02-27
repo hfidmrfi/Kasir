@@ -1,0 +1,46 @@
+CRITICAL - 2024-01-21 01:37:57 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/main.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/main.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/main', [], true)
+ 3 APPPATH\Controllers\Layout.php(9): view('layout/main')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Layout->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Layout))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-21 01:39:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/main.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/main.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/main', [], true)
+ 3 APPPATH\Controllers\Layout.php(9): view('layout/main')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Layout->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Layout))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-21 01:39:38 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/main.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/main.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/main', [], true)
+ 3 APPPATH\Controllers\Layout.php(9): view('layout/main')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Layout->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Layout))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-21 01:41:28 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/main.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/main.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/main', [], true)
+ 3 APPPATH\Controllers\Layout.php(9): view('layout/main')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Layout->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Layout))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-21 01:43:45 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/main.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/main.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/main', [], true)
+ 3 APPPATH\Controllers\Layout.php(9): view('layout/main')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Layout->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Layout))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')

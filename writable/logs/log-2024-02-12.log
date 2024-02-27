@@ -1,0 +1,416 @@
+CRITICAL - 2024-02-12 06:17:44 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Builder::findAll()
+in APPPATH\Models\Mproduk.php on line 48.
+ 1 APPPATH\Controllers\Produk.php(12): App\Models\Mproduk->getAllProduk()
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-12 06:20:51 --> Error: Call to undefined function App\Controllers\getAllProduk()
+in APPPATH\Controllers\Produk.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-12 06:31:06 --> Error: Object of class CodeIgniter\Database\MySQLi\Builder could not be converted to string
+in APPPATH\Models\Mproduk.php on line 53.
+ 1 APPPATH\Controllers\Produk.php(15): App\Models\Mproduk->getAllProduk()
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-12 06:31:34 --> Error: Object of class CodeIgniter\Database\MySQLi\Builder could not be converted to string
+in APPPATH\Models\Mproduk.php on line 53.
+ 1 APPPATH\Controllers\Produk.php(15): App\Models\Mproduk->getAllProduk()
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+ERROR - 2024-02-12 06:32:11 --> mysqli_sql_exception: Unknown column 'SELECT * FROM' in 'field list' in C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `SELECT ...', 0)
+#1 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `SELECT ...')
+#2 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `SELECT ...')
+#3 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `SELECT ...', Array, false)
+#4 C:\xampp\htdocs\ci4\app\Models\Mproduk.php(53): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\app\Controllers\Produk.php(15): App\Models\Mproduk->getAllProduk()
+#6 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Produk->index()
+#7 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#8 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-02-12 06:32:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'SELECT * FROM' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `SELECT * FROM` `produk`
+FROM `produk`', [], false)
+ 2 APPPATH\Models\Mproduk.php(53): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Produk.php(15): App\Models\Mproduk->getAllProduk()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-12 06:32:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'SELECT * FROM' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `SELECT * FROM` `produk`
+FROM `produk`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `SELECT * FROM` `produk`
+FROM `produk`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `SELECT * FROM` `produk`
+FROM `produk`', [], false)
+ 4 APPPATH\Models\Mproduk.php(53): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Produk.php(15): App\Models\Mproduk->getAllProduk()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-12 06:32:11 --> [Caused by] mysqli_sql_exception: Unknown column 'SELECT * FROM' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `SELECT * FROM` `produk`
+FROM `produk`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `SELECT * FROM` `produk`
+FROM `produk`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `SELECT * FROM` `produk`
+FROM `produk`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `SELECT * FROM` `produk`
+FROM `produk`', [], false)
+ 5 APPPATH\Models\Mproduk.php(53): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Produk.php(15): App\Models\Mproduk->getAllProduk()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-12 06:34:10 --> ErrorException: Undefined index: katid
+in APPPATH\Views\produk\data_produk.php on line 66.
+ 1 APPPATH\Views\produk\data_produk.php(66): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: katid', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\produk\\data_produk.php', 66, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\produk\\data_produk.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('produk/data_produk', [], true)
+ 5 APPPATH\Controllers\Produk.php(14): view('produk/data_produk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-12 06:34:43 --> ErrorException: Undefined index: idProduk
+in APPPATH\Views\produk\data_produk.php on line 70.
+ 1 APPPATH\Views\produk\data_produk.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: idProduk', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\produk\\data_produk.php', 70, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\produk\\data_produk.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('produk/data_produk', [], true)
+ 5 APPPATH\Controllers\Produk.php(14): view('produk/data_produk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+ERROR - 2024-02-12 06:35:31 --> mysqli_sql_exception: Unknown column 'produk.id_produk' in 'field list' in C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `produk`...', 0)
+#1 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `produk`...')
+#2 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `produk`...')
+#3 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `produk`...', Array, false)
+#4 C:\xampp\htdocs\ci4\app\Models\Mproduk.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\app\Controllers\Produk.php(12): App\Models\Mproduk->getAllProduk()
+#6 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Produk->index()
+#7 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#8 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-02-12 06:35:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'produk.id_produk' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `produk`.`id_produk`, `produk`.`kode_produk`, `produk`.`nama_produk`, `produk`.`harga_beli`, `produk`.`harga_jual`, `produk`.`diskon`, `satuan`.`satnama`, `kategori`.`katnama`, `produk`.`stok`
+FROM `produk`
+JOIN `satuan` ON `satuan`.`satid` = `produk`.`satid`
+JOIN `kategori` ON `kategori`.`katid`  =`produk`.`katid`', [], false)
+ 2 APPPATH\Models\Mproduk.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Produk.php(12): App\Models\Mproduk->getAllProduk()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-12 06:35:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'produk.id_produk' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `produk`.`id_produk`, `produk`.`kode_produk`, `produk`.`nama_produk`, `produk`.`harga_beli`, `produk`.`harga_jual`, `produk`.`diskon`, `satuan`.`satnama`, `kategori`.`katnama`, `produk`.`stok`
+FROM `produk`
+JOIN `satuan` ON `satuan`.`satid` = `produk`.`satid`
+JOIN `kategori` ON `kategori`.`katid`  =`produk`.`katid`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `produk`.`id_produk`, `produk`.`kode_produk`, `produk`.`nama_produk`, `produk`.`harga_beli`, `produk`.`harga_jual`, `produk`.`diskon`, `satuan`.`satnama`, `kategori`.`katnama`, `produk`.`stok`
+FROM `produk`
+JOIN `satuan` ON `satuan`.`satid` = `produk`.`satid`
+JOIN `kategori` ON `kategori`.`katid`  =`produk`.`katid`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `produk`.`id_produk`, `produk`.`kode_produk`, `produk`.`nama_produk`, `produk`.`harga_beli`, `produk`.`harga_jual`, `produk`.`diskon`, `satuan`.`satnama`, `kategori`.`katnama`, `produk`.`stok`
+FROM `produk`
+JOIN `satuan` ON `satuan`.`satid` = `produk`.`satid`
+JOIN `kategori` ON `kategori`.`katid`  =`produk`.`katid`', [], false)
+ 4 APPPATH\Models\Mproduk.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Produk.php(12): App\Models\Mproduk->getAllProduk()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-12 06:35:31 --> [Caused by] mysqli_sql_exception: Unknown column 'produk.id_produk' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `produk`.`id_produk`, `produk`.`kode_produk`, `produk`.`nama_produk`, `produk`.`harga_beli`, `produk`.`harga_jual`, `produk`.`diskon`, `satuan`.`satnama`, `kategori`.`katnama`, `produk`.`stok`
+FROM `produk`
+JOIN `satuan` ON `satuan`.`satid` = `produk`.`satid`
+JOIN `kategori` ON `kategori`.`katid`  =`produk`.`katid`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `produk`.`id_produk`, `produk`.`kode_produk`, `produk`.`nama_produk`, `produk`.`harga_beli`, `produk`.`harga_jual`, `produk`.`diskon`, `satuan`.`satnama`, `kategori`.`katnama`, `produk`.`stok`
+FROM `produk`
+JOIN `satuan` ON `satuan`.`satid` = `produk`.`satid`
+JOIN `kategori` ON `kategori`.`katid`  =`produk`.`katid`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `produk`.`id_produk`, `produk`.`kode_produk`, `produk`.`nama_produk`, `produk`.`harga_beli`, `produk`.`harga_jual`, `produk`.`diskon`, `satuan`.`satnama`, `kategori`.`katnama`, `produk`.`stok`
+FROM `produk`
+JOIN `satuan` ON `satuan`.`satid` = `produk`.`satid`
+JOIN `kategori` ON `kategori`.`katid`  =`produk`.`katid`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `produk`.`id_produk`, `produk`.`kode_produk`, `produk`.`nama_produk`, `produk`.`harga_beli`, `produk`.`harga_jual`, `produk`.`diskon`, `satuan`.`satnama`, `kategori`.`katnama`, `produk`.`stok`
+FROM `produk`
+JOIN `satuan` ON `satuan`.`satid` = `produk`.`satid`
+JOIN `kategori` ON `kategori`.`katid`  =`produk`.`katid`', [], false)
+ 5 APPPATH\Models\Mproduk.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Produk.php(12): App\Models\Mproduk->getAllProduk()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+INFO - 2024-02-12 06:50:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 06:50:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 06:50:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 06:51:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 06:51:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 06:51:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 06:51:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-12 06:58:34 --> ParseError: syntax error, unexpected end of file
+in APPPATH\Views\produk\tambah-produk.php on line 107.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('produk/tambah-produk', [], true)
+ 3 APPPATH\Controllers\Produk.php(23): view('produk/tambah-produk')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->tambahProduk()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-12 06:59:07 --> ErrorException: Undefined variable: listKategori
+in APPPATH\Views\produk\tambah-produk.php on line 64.
+ 1 APPPATH\Views\produk\tambah-produk.php(64): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: listKategori', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\produk\\tambah-produk.php', 64, [])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\produk\\tambah-produk.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('produk/tambah-produk', [], true)
+ 5 APPPATH\Controllers\Produk.php(23): view('produk/tambah-produk')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->tambahProduk()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-12 06:59:28 --> ErrorException: Undefined index: satid
+in APPPATH\Views\produk\tambah-produk.php on line 83.
+ 1 APPPATH\Views\produk\tambah-produk.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: satid', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\produk\\tambah-produk.php', 83, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\produk\\tambah-produk.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('produk/tambah-produk', [], true)
+ 5 APPPATH\Controllers\Produk.php(23): view('produk/tambah-produk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->tambahProduk()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-12 07:00:06 --> ErrorException: Undefined index: satid
+in APPPATH\Views\produk\tambah-produk.php on line 78.
+ 1 APPPATH\Views\produk\tambah-produk.php(78): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: satid', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\produk\\tambah-produk.php', 78, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\produk\\tambah-produk.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('produk/tambah-produk', [], true)
+ 5 APPPATH\Controllers\Produk.php(23): view('produk/tambah-produk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->tambahProduk()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+ERROR - 2024-02-12 07:03:54 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_ukk`.`produk`, CONSTRAINT `produk_ibfk_1` FOREIGN KEY (`satid`) REFERENCES `satuan` (`satid`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ci4\app\Controllers\Produk.php(38): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Produk->simpanProduk()
+#9 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#10 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-02-12 07:03:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_ukk`.`produk`, CONSTRAINT `produk_ibfk_1` FOREIGN KEY (`satid`) REFERENCES `satuan` (`satid`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `produk` (`kode_produk`, `nama_produk`, `harga_beli`, `harga_jual`, `diskon`, `katid`, `satid`, `stok`) VALUES (:kode_produk:, :nama_produk:, :harga_beli:, :harga_jual:, :diskon:, :katid:, :satid:, :stok:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Produk.php(38): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->simpanProduk()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-12 07:03:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_ukk`.`produk`, CONSTRAINT `produk_ibfk_1` FOREIGN KEY (`satid`) REFERENCES `satuan` (`satid`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `produk` (`kode_produk`, `nama_produk`, `harga_beli`, `harga_jual`, `diskon`, `katid`, `satid`, `stok`) VALUES (\'78787878\', \'MIe\', \'3000\', \'3500\', \'10\', \'11\', \'\', \'100\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `produk` (`kode_produk`, `nama_produk`, `harga_beli`, `harga_jual`, `diskon`, `katid`, `satid`, `stok`) VALUES (\'78787878\', \'MIe\', \'3000\', \'3500\', \'10\', \'11\', \'\', \'100\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `produk` (`kode_produk`, `nama_produk`, `harga_beli`, `harga_jual`, `diskon`, `katid`, `satid`, `stok`) VALUES (:kode_produk:, :nama_produk:, :harga_beli:, :harga_jual:, :diskon:, :katid:, :satid:, :stok:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Produk.php(38): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->simpanProduk()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-12 07:03:55 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_ukk`.`produk`, CONSTRAINT `produk_ibfk_1` FOREIGN KEY (`satid`) REFERENCES `satuan` (`satid`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `produk` (`kode_produk`, `nama_produk`, `harga_beli`, `harga_jual`, `diskon`, `katid`, `satid`, `stok`) VALUES (\'78787878\', \'MIe\', \'3000\', \'3500\', \'10\', \'11\', \'\', \'100\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `produk` (`kode_produk`, `nama_produk`, `harga_beli`, `harga_jual`, `diskon`, `katid`, `satid`, `stok`) VALUES (\'78787878\', \'MIe\', \'3000\', \'3500\', \'10\', \'11\', \'\', \'100\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `produk` (`kode_produk`, `nama_produk`, `harga_beli`, `harga_jual`, `diskon`, `katid`, `satid`, `stok`) VALUES (\'78787878\', \'MIe\', \'3000\', \'3500\', \'10\', \'11\', \'\', \'100\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `produk` (`kode_produk`, `nama_produk`, `harga_beli`, `harga_jual`, `diskon`, `katid`, `satid`, `stok`) VALUES (:kode_produk:, :nama_produk:, :harga_beli:, :harga_jual:, :diskon:, :katid:, :satid:, :stok:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Produk.php(38): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->simpanProduk()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+ERROR - 2024-02-12 07:04:36 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_ukk`.`produk`, CONSTRAINT `produk_ibfk_1` FOREIGN KEY (`satid`) REFERENCES `satuan` (`satid`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ci4\app\Controllers\Produk.php(38): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Produk->simpanProduk()
+#9 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#10 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-02-12 07:04:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_ukk`.`produk`, CONSTRAINT `produk_ibfk_1` FOREIGN KEY (`satid`) REFERENCES `satuan` (`satid`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `produk` (`kode_produk`, `nama_produk`, `harga_beli`, `harga_jual`, `diskon`, `katid`, `satid`, `stok`) VALUES (:kode_produk:, :nama_produk:, :harga_beli:, :harga_jual:, :diskon:, :katid:, :satid:, :stok:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Produk.php(38): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->simpanProduk()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-12 07:04:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_ukk`.`produk`, CONSTRAINT `produk_ibfk_1` FOREIGN KEY (`satid`) REFERENCES `satuan` (`satid`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `produk` (`kode_produk`, `nama_produk`, `harga_beli`, `harga_jual`, `diskon`, `katid`, `satid`, `stok`) VALUES (\'78787878\', \'MIe\', \'3000\', \'3500\', \'10\', \'11\', \'\', \'100\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `produk` (`kode_produk`, `nama_produk`, `harga_beli`, `harga_jual`, `diskon`, `katid`, `satid`, `stok`) VALUES (\'78787878\', \'MIe\', \'3000\', \'3500\', \'10\', \'11\', \'\', \'100\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `produk` (`kode_produk`, `nama_produk`, `harga_beli`, `harga_jual`, `diskon`, `katid`, `satid`, `stok`) VALUES (:kode_produk:, :nama_produk:, :harga_beli:, :harga_jual:, :diskon:, :katid:, :satid:, :stok:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Produk.php(38): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->simpanProduk()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-12 07:04:36 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_ukk`.`produk`, CONSTRAINT `produk_ibfk_1` FOREIGN KEY (`satid`) REFERENCES `satuan` (`satid`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `produk` (`kode_produk`, `nama_produk`, `harga_beli`, `harga_jual`, `diskon`, `katid`, `satid`, `stok`) VALUES (\'78787878\', \'MIe\', \'3000\', \'3500\', \'10\', \'11\', \'\', \'100\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `produk` (`kode_produk`, `nama_produk`, `harga_beli`, `harga_jual`, `diskon`, `katid`, `satid`, `stok`) VALUES (\'78787878\', \'MIe\', \'3000\', \'3500\', \'10\', \'11\', \'\', \'100\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `produk` (`kode_produk`, `nama_produk`, `harga_beli`, `harga_jual`, `diskon`, `katid`, `satid`, `stok`) VALUES (\'78787878\', \'MIe\', \'3000\', \'3500\', \'10\', \'11\', \'\', \'100\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `produk` (`kode_produk`, `nama_produk`, `harga_beli`, `harga_jual`, `diskon`, `katid`, `satid`, `stok`) VALUES (:kode_produk:, :nama_produk:, :harga_beli:, :harga_jual:, :diskon:, :katid:, :satid:, :stok:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Produk.php(38): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->simpanProduk()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+INFO - 2024-02-12 07:15:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 07:19:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 07:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 07:19:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 07:20:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 07:20:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 07:20:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 07:20:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 07:21:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 07:21:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 09:34:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 09:34:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 09:34:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 09:34:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 09:34:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 09:34:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 09:34:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 09:34:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 09:34:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 09:34:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 09:34:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 09:34:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 09:35:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 09:35:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 09:35:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-12 09:47:59 --> ErrorException: Undefined index: katnama
+in APPPATH\Views\produk\edit-produk.php on line 25.
+ 1 APPPATH\Views\produk\edit-produk.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: katnama', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\produk\\edit-produk.php', 25, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\produk\\edit-produk.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('produk/edit-produk', [], true)
+ 5 APPPATH\Controllers\Produk.php(51): view('produk/edit-produk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->editProduk('8')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-12 09:49:07 --> ErrorException: Undefined index: katnama
+in APPPATH\Views\produk\edit-produk.php on line 25.
+ 1 APPPATH\Views\produk\edit-produk.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: katnama', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\produk\\edit-produk.php', 25, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\produk\\edit-produk.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('produk/edit-produk', [], true)
+ 5 APPPATH\Controllers\Produk.php(51): view('produk/edit-produk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->editProduk('8')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+CRITICAL - 2024-02-12 09:49:14 --> ErrorException: Undefined index: katnama
+in APPPATH\Views\produk\edit-produk.php on line 25.
+ 1 APPPATH\Views\produk\edit-produk.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: katnama', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\produk\\edit-produk.php', 25, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\produk\\edit-produk.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('produk/edit-produk', [], true)
+ 5 APPPATH\Controllers\Produk.php(51): view('produk/edit-produk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Produk->editProduk('8')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ci4\\public\\index.php')
+INFO - 2024-02-12 09:50:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 10:18:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 10:19:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
